@@ -1,0 +1,17 @@
+# main repos
+- git: {local-name: turtle/joystick, 
+        uri: 'git@bitbucket.org:gdroge/turtle_joy.git', 
+        version: master}
+
+# Turtlebot repos
+- git: {local-name: turtle/turtlebot3_sim,
+        uri: 'https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git',
+        version: master}
+- git: {local-name: turtle/turtlebot_msgs,
+        uri: 'https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git',
+        version: master}
+- git: {local-name: turtle/turtlebot3,
+        uri: 'https://github.com/ROBOTIS-GIT/turtlebot3.git',
+        version: master}
+
+
