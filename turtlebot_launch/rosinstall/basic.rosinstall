@@ -3,6 +3,14 @@
         uri: 'git@bitbucket.org:gdroge/turtle_joy.git', 
         version: master}
 
+# Robot development repos
+- git: {local-name: low_level_control, 
+        uri: 'git@bitbucket.org:gdroge/low-level-control.git', 
+        version: master}
+- git: {local-name: setup_and_launch, 
+        uri: 'git@bitbucket.org:gdroge/turtlebot_setup.git', 
+        version: master}
+
 # Turtlebot repos
 - git: {local-name: turtle/turtlebot3_sim,
         uri: 'https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git',
