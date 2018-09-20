@@ -1,13 +1,17 @@
 <launch>
   <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="run_rviz" default="true" />
+  <arg name="namespace" default="" />
 
   <param name="tb3_model" value="$(arg model)"/>
+  <param name="odom_frame" value="$(arg namespace)/odom" />
 
   <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
     <arg name="model" value="$(arg model)" />
   </include>
 
-  <node pkg="dynamic_models" type="unicycle_dynamics" name="unicyle_node" output="screen" />
+  <node pkg="dynamic_models" type="unicycle_dynamics" name="unicyle_node" output="screen">
+  </node>
   <node pkg="turtlebot_sim" type="turtlebot_vehicle" name="turtlebot_vehicle" output="screen" />
 
     <!--
@@ -18,5 +22,5 @@
     <param name="publish_frequency" type="double" value="50.0" />
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_fake)/rviz/turtlebot3_fake.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_fake)/rviz/turtlebot3_fake.rviz" if="$(arg run_rviz)"/>
 </launch>
