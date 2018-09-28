@@ -1,5 +1,5 @@
 <launch>
-  <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="namespace" default="/robot1"/>
 
   <group ns="$(arg namespace)" >

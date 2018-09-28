@@ -5,9 +5,11 @@
 
   <param name="tb3_model" value="$(arg model)"/>
   <param name="odom_frame" value="$(arg namespace)/odom" />
+  <param name="base_frame" value="$(arg namespace)/base_footprint" />
 
-  <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+  <include file="$(find turtlebot_launch)/launch/include/description.launch.xml">
     <arg name="model" value="$(arg model)" />
+    <arg name="robot_tf_prefix" value="$(arg namespace)/"/>
   </include>
 
   <node pkg="dynamic_models" type="unicycle_dynamics" name="unicyle_node" output="screen">
