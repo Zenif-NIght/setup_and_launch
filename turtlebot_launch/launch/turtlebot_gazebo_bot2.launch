@@ -1,23 +1,11 @@
 <launch>
   <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
-  <arg name="namespace" default="/robot1"/>
-  <arg name="run_sim" default="true"/>
-  <arg name="x_pos" default="-7.0"/>
+  <arg name="namespace" default="/robot2"/>
+
+  <arg name="x_pos" default="7.0"/>
   <arg name="y_pos" default="-1.0"/>
   <arg name="z_pos" default=" 0.0"/>
   <arg name="yaw"   default=" 1.57"/>
-
-  <!-- Start Simulation -->
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/>
-    <arg name="paused" value="false"/>
-    <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="false"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
-  </include>
-
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_launch)/rviz/Turtlebot1_gazebo.rviz"/>
 
   <!-- Create Vehicle -->
   <group ns="$(arg namespace)" >

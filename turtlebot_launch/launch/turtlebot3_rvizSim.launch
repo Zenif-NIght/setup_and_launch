@@ -1,6 +1,5 @@
 <launch>
   <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
-  <arg name="run_rviz" default="true" />
   <arg name="spawn_gazebo" default="false" />
   <arg name="namespace" default="" />
   <arg name="x_pos" default="-7.0"/>
@@ -8,7 +7,6 @@
   <arg name="z_pos" default=" 0.0"/>
   <arg name="yaw"   default=" 1.57"/>
 
-  <param name="tb3_model" value="$(arg model)"/>
   <param name="odom_frame" value="$(arg namespace)/odom" />
   <param name="base_frame" value="$(arg namespace)/base_footprint" />
 
@@ -22,6 +20,8 @@
     <param name="publish_frequency" type="double" value="50.0" />    
   </node>
 
+  <node pkg="turtlebot_sim" type="simple_map_tf" name="turtlebot_vehicle" output="screen"/>
+
   <!-- Simulate vehicle dynamics -->
   <node pkg="dynamic_models" type="unicycle_dynamics" name="unicyle_node" output="screen" unless="$(arg spawn_gazebo)">
   </node>
@@ -31,7 +31,4 @@
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg namespace) -x
     $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg yaw)
     -param robot_description" if="$(arg spawn_gazebo)"/>
-
-  <!-- Visualize through rviz -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_fake)/rviz/turtlebot3_fake.rviz" if="$(arg run_rviz)"/>
 </launch>
