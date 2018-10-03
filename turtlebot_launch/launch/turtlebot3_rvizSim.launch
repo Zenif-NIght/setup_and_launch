@@ -20,7 +20,8 @@
     <param name="publish_frequency" type="double" value="50.0" />    
   </node>
 
-  <node pkg="turtlebot_sim" type="simple_map_tf" name="turtlebot_vehicle" output="screen"/>
+  <!-- Create mapping from odom frame to map frame" -->
+  <node pkg="turtlebot_sim" type="simple_map_tf" name="map_to_odom" output="screen"/>
 
   <!-- Simulate vehicle dynamics -->
   <node pkg="dynamic_models" type="unicycle_dynamics" name="unicyle_node" output="screen" unless="$(arg spawn_gazebo)">
