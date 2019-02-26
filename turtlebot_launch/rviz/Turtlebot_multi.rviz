@@ -218,7 +218,6 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
-        "": true
         Axes: true
         Grid: true
         LaserScan: true
@@ -425,7 +424,7 @@ Visualization Manager:
   Global Options:
     Background Color: 255; 255; 255
     Default Light: true
-    Fixed Frame: robot1/odom
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:

@@ -33,17 +33,6 @@
             <remap from="/cmd_vel" to="$(arg namespace)/cmd_vel" />
           </node>
       </group>
-
-      <!-- Run the goal to goal control -->
-      <node pkg="controllers" type="simple_go_to_goal" name="go_to_goal"  output="screen" unless="$(arg run_joystick)">
-          <param name="nominal_velocity" value="0.5" />
-          <param name="trans_vel_gain" value="0.5" />
-          <param name="rot_vel_gain" value="1.0" />
-
-          <remap from="/cmd_vel" to="$(arg namespace)/cmd_vel" />
-          <remap from="/goal" to="/move_base_simple/goal" />
-          <remap from="/odom" to="$(arg namespace)/odom" />
-      </node>
   </group>
 
   <!-- Create Vehicle -->
@@ -57,6 +46,17 @@
       <arg name="z_pos" value="$(arg z_pos)"/>
       <arg name="yaw"   value="$(arg yaw)"/>
     </include>
+
+    <!-- Run the goal to goal control -->
+    <node pkg="controllers" type="simple_go_to_goal" name="go_to_goal"  output="screen" unless="$(arg run_joystick)">
+        <param name="nominal_velocity" value="0.5" />
+        <param name="trans_vel_gain" value="0.5" />
+        <param name="rot_vel_gain" value="1.0" />
+
+        <remap from="/cmd_vel" to="$(arg namespace)/cmd_vel" />
+        <remap from="goal" to="/move_base_simple/goal" />
+        <remap from="odom" to="$(arg namespace)/odom" />
+    </node>
   </group>
 
 
