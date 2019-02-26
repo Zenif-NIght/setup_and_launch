@@ -29,7 +29,7 @@
 
 
   <!-- Run Robot 1 -->
-  <include file="$(find turtlebot_launch)/launch/proj3.launch" if="$(arg r1_run)" >
+  <include file="$(find turtlebot_launch)/launch/proj3_randGoal.launch" if="$(arg r1_run)" >
     <arg name="model" value="$(arg model)" />
     <arg name="namespace" value="$(arg r1_namespace)" />
 
@@ -45,7 +45,7 @@
 
 
   <!-- Run Robot 2 -->
-  <include file="$(find turtlebot_launch)/launch/proj3.launch" if="$(arg r2_run)" >
+  <include file="$(find turtlebot_launch)/launch/proj3_randGoal.launch" if="$(arg r2_run)" >
     <arg name="model" value="$(arg model)" />
     <arg name="namespace" value="$(arg r2_namespace)" />
 
@@ -60,7 +60,7 @@
   </include>
 
   <!-- Run Robot 3 -->
-  <include file="$(find turtlebot_launch)/launch/proj3.launch" if="$(arg r2_run)" >
+  <include file="$(find turtlebot_launch)/launch/proj3_randGoal.launch" if="$(arg r2_run)" >
     <arg name="model" value="$(arg model)" />
     <arg name="namespace" value="$(arg r3_namespace)" />
 
