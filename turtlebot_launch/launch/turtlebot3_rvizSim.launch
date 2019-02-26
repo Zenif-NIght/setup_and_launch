@@ -21,7 +21,12 @@
   </node>
 
   <!-- Create mapping from odom frame to map frame" -->
-  <node pkg="turtlebot_sim" type="simple_map_tf" name="map_to_odom" output="screen"/>
+  <node pkg="turtlebot_sim" type="simple_map_tf" name="map_to_odom" output="screen">
+    <param name="x_pos" type="double" value="$(arg x_pos)" />
+    <param name="y_pos" type="double" value="$(arg y_pos)" />
+    <param name="z_pos" type="double" value="$(arg z_pos)" />
+    <param name="yaw" type="double" value="$(arg yaw)" />
+  </node>
 
   <!-- Simulate vehicle dynamics -->
   <node pkg="dynamic_models" type="unicycle_dynamics" name="unicyle_node" output="screen" unless="$(arg spawn_gazebo)">
