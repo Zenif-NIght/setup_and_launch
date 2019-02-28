@@ -6,9 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /RobotModel2
-        - /LaserScan2
-        - /RobotModel3
-        - /LaserScan3
+        - /RobotModel4/Status1
+        - /Path4
       Splitter Ratio: 0.602941155
     Tree Height: 666
   - Class: rviz/Selection
@@ -241,6 +240,7 @@ Visualization Manager:
         Axes: true
         Grid: true
         LaserScan: true
+        MarkerArray: true
         Odometry: true
         Path: true
         RobotModel: true
@@ -485,6 +485,104 @@ Visualization Manager:
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
       Topic: /robot3/path
+      Unreliable: false
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /topology_graph
+      Name: MarkerArray
+      Namespaces:
+        topology_graph: true
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        /robot4/base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        /robot4/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        /robot4/base_scan:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        /robot4/camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        /robot4/camera_rgb_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        /robot4/camera_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        /robot4/caster_back_left_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        /robot4/caster_back_right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        /robot4/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        /robot4/wheel_left_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        /robot4/wheel_right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: RobotModel
+      Robot Description: /robot4/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 255; 0
+      Enabled: true
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
+      Line Style: Lines
+      Line Width: 0.0299999993
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
+      Topic: /robot4/path
       Unreliable: false
       Value: true
   Enabled: true
