@@ -1,0 +1,8 @@
+<launch>
+  <arg name="dynamics_model" default="jerk_unicycle_dynamics"/>
+
+  <include file="$(find turtlebot_launch)/launch/proj3.launch">
+    <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
+  </include>
+
+</launch>
