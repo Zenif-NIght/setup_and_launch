@@ -9,6 +9,8 @@
   <arg name="y_pos" default="-1.0"/>
   <arg name="z_pos" default=" 0.0"/>
   <arg name="yaw"   default=" 1.57"/>
+  <arg name="dynamics_model" default="unicycle_dynamics"/>
+  <arg name="goal_topic" default="/move_base_simple/goal" />
 
   <!-- Start Simulation -->
   <group if="$(arg run_sim)">
@@ -45,6 +47,7 @@
       <arg name="y_pos" value="$(arg y_pos)"/>
       <arg name="z_pos" value="$(arg z_pos)"/>
       <arg name="yaw"   value="$(arg yaw)"/>
+      <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
     </include>
 
     <!-- Run the goal to goal control -->
@@ -54,7 +57,7 @@
         <param name="rot_vel_gain" value="1.0" />
 
         <remap from="/cmd_vel" to="$(arg namespace)/cmd_vel" />
-        <remap from="goal" to="/move_base_simple/goal" />
+        <remap from="goal" to="$(arg goal_topic)" />
         <remap from="odom" to="$(arg namespace)/odom" />
     </node>
   </group>

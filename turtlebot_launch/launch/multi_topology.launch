@@ -2,6 +2,7 @@
   <!-- General parameters -->
   <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="spawn_gazebo" default="false" />
+  <arg name="dynamics_model" default="unicycle_dynamics"/>
 
   <!-- Robot 1 parameters -->
   <arg name="r1_run" default="true"/>
@@ -50,6 +51,8 @@
     <arg name="y_pos" value="$(arg r1_y_pos)"/>
     <arg name="z_pos" value="$(arg r1_z_pos)"/>
     <arg name="yaw"   value="$(arg r1_yaw)"/>
+
+    <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
   </include>
 
 
@@ -67,6 +70,8 @@
     <arg name="y_pos" value="$(arg r2_y_pos)"/>
     <arg name="z_pos" value="$(arg r2_z_pos)"/>
     <arg name="yaw"   value="$(arg r2_yaw)"/>
+
+    <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
   </include>
 
   <!-- Run Robot 3 -->
@@ -83,6 +88,8 @@
     <arg name="y_pos" value="$(arg r3_y_pos)"/>
     <arg name="z_pos" value="$(arg r3_z_pos)"/>
     <arg name="yaw"   value="$(arg r3_yaw)"/>
+
+    <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
   </include>
 
   <!-- Run Robot 4 -->
@@ -99,6 +106,8 @@
     <arg name="y_pos" value="$(arg r4_y_pos)"/>
     <arg name="z_pos" value="$(arg r4_z_pos)"/>
     <arg name="yaw"   value="$(arg r4_yaw)"/>
+
+    <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
   </include>
 
 
