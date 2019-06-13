@@ -29,6 +29,13 @@ Project 2 has two launch files you should look at:
 *  proj2.launch: Launches the turtlebot running with a simple unicycle model
 *  proj2_quad.launch: Launches a quadrotor running with a simple unicycle model
 
+Project 3 has four launch files to consider
+*  "proj3.launch": This is the default launch file
+    *  Upon launch, you can control the robot using the RVIZ "2D Nav Goal" at the top of the RVIZ window
+*  "proj3_randGoal.launch": This code executes a random goal. Once the goal is achieved, then another random goal is generated.
+*  "multi_g2g.launch": This is very similar to the "proj3_randGoal.launch", but now multiple robots are going to random goals
+*  "multi_topology.launch": This has the robots move randomly over a graph topology.
+
 # Installing Gazebo
 To run the launch files, you must first install Gazebo
 
