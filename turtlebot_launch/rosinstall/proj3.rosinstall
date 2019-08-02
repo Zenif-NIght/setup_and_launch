@@ -13,6 +13,9 @@
 - git: {local-name: high_level_control, 
         uri: 'git@gitlab.com:droge-robotics/high_level_control.git', 
         version: proj3}
+- git: {local-name: topology_emulator, 
+        uri: 'git@gitlab.com:droge-robotics/network-topolology-emulator.git', 
+        version: rebroadcasters}
 
 # Turtlebot repos
 - git: {local-name: turtle/turtlebot3_sim,
