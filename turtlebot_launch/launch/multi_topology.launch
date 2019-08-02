@@ -119,5 +119,12 @@
 
   </node>
 
+  <include file="$(find position_rebroadcaster)/launch/position_rebroadcaster.launch">
+  </include>
+
+  <node pkg="network_topology_emulator" type="network_emulator.py" name="network_emulator_node" args="--viz --rate 15">
+      <remap from="network_graph" to="topology_graph"/>
+  </node>
+
 
 </launch>

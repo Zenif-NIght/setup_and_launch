@@ -35,6 +35,10 @@
     </node>
 
     <node pkg="turtlebot_sim" type="turtlebot_vehicle" name="turtlebot_vehicle" output="screen"/>
+
+    <include file="$(find turtlebot_sim)/launch/line_world_laser_scan.launch">
+      <arg name="namespace" value="$(arg namespace)" />
+    </include>
   </group>
 
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg namespace) -x
