@@ -19,6 +19,17 @@ The sim requires the install of a variety of pre-build ros packages. This can be
 
 `sudo apt install ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-gmapping ros-kinetic-navigation`
 
+# Installing Google Test
+Google Test is a unit testing framework required for the packages within the .rosinstall files. Google Test is included with the full desktop installation of ROS. If you have already installed ROS follow the steps below to setup Google Test.
+
+```console
+sudo apt-get install cmake libgtest-dev
+cd /usr/src/gtest
+sudo cmake CMakeLists.txt
+sudo make
+sudo cp *.a /usr/lib
+```
+
 # Launching the sim
 Prior to launching the sim, you must export the turtlebot3 model:
 
