@@ -16,6 +16,7 @@
 - git: {local-name: topology_emulator, 
         uri: 'git@gitlab.com:droge-robotics/network-topolology-emulator.git', 
         version: master}
+        
 # Turtlebot repos
 - git: {local-name: turtle/turtlebot3_sim,
         uri: 'https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git',
