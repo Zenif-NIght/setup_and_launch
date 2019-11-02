@@ -1,22 +1,22 @@
 # main repos
-- git: {local-name: turtle/joystick, 
-        uri: 'git@bitbucket.org:gdroge/turtle_joy.git', 
-        version: master}
+- git: {local-name: joystick_cntrl, 
+        uri: 'git@gitlab.com:droge-robotics/turtle_joy.git', 
+        version: proj3}
 
 # Robot development repos
 - git: {local-name: low_level_control, 
-        uri: 'git@bitbucket.org:gdroge/low-level-control.git', 
-        version: master}
+        uri: 'git@gitlab.com:droge-robotics/low-level-control.git', 
+        version: proj3}
 - git: {local-name: setup_and_launch, 
-        uri: 'git@bitbucket.org:gdroge/turtlebot_setup.git', 
-        version: master}
-- git: {local-name: documentation, 
-        uri: 'git@bitbucket.org:gdroge/turtlebot_devel.git', 
-        version: master}
+        uri: 'git@gitlab.com:droge-robotics/setup_and_launch.git', 
+        version: proj3}
+- git: {local-name: high_level_control, 
+        uri: 'git@gitlab.com:droge-robotics/high_level_control.git', 
+        version: proj3}
 - git: {local-name: topology_emulator, 
         uri: 'git@gitlab.com:droge-robotics/network-topolology-emulator.git', 
-        version: master}
-        
+        version: rebroadcasters}
+
 # Turtlebot repos
 - git: {local-name: turtle/turtlebot3_sim,
         uri: 'https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git',
@@ -27,3 +27,4 @@
 - git: {local-name: turtle/turtlebot3,
         uri: 'https://github.com/ROBOTIS-GIT/turtlebot3.git',
         version: master}
+

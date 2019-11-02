@@ -1,0 +1,50 @@
+<launch>
+  <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="namespace" default="/robot1"/>
+
+  <arg name="run_sim" default="true"/>
+  <arg name="run_rviz" default="true"/>
+  <arg name="rand_goals" default="true"/>
+  <arg name="spawn_gazebo" default="false" />
+
+  <arg name="x_pos" default="-7.0"/>
+  <arg name="y_pos" default="-1.0"/>
+  <arg name="z_pos" default=" 0.0"/>
+  <arg name="yaw"   default=" 1.57"/>
+
+  <arg name="dynamics_model" default="unicycle_dynamics"/>
+  <arg name="goal_topic" default="$(arg namespace)/goal" />
+
+  <include file="$(find turtlebot_launch)/launch/proj3.launch">
+    <arg name="model" value="$(arg model)"/>
+    <arg name="namespace" value="$(arg namespace)"/>
+    <arg name="run_sim" value="$(arg run_sim)"/>
+    <arg name="run_rviz" value="$(arg run_rviz)"/>
+    <arg name="run_joystick" value="false"/>
+    <arg name="spawn_gazebo" value="$(arg spawn_gazebo)" />
+    <arg name="x_pos" value="$(arg x_pos)"/>
+    <arg name="y_pos" value="$(arg y_pos)"/>
+    <arg name="z_pos" value="$(arg z_pos)"/>
+    <arg name="yaw"   value="$(arg yaw)"/>
+    <arg name="dynamics_model"   value="$(arg dynamics_model)"/>
+    <arg name="goal_topic" value="$(arg goal_topic)"/>
+  </include>
+
+  <!-- Run the random goal generator -->
+  <group ns="$(arg namespace)" >
+    <node pkg="go2goal" type="rand_goal_generator" name="rand_goal_generator"  output="screen" if="$(arg rand_goals)">
+      <param name="x_max" value="5" />
+      <param name="y_max" value="5" />
+      <param name="z_max" value="0.0" />
+      <param name="dist_to_change" value="0.5" />
+
+      <remap from="goal" to="$(arg goal_topic)" />
+      <remap from="odom" to="$(arg namespace)/odom" />
+    </node>
+  </group>
+
+
+
+
+
+</launch>

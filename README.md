@@ -1,6 +1,13 @@
 # setup_and_launch
 This repo will contain launch and configuration files for launching the class simulators.
 
+# Installing ROS
+To begin, install the version of ROS supported by your version of Ubuntu. Currently Ubuntu 16.04 uses ROS Kinetic and 18.04 uses ROS Melodic.
+
+[ROS Melodic Install Instructions](http://wiki.ros.org/melodic/Installation/Ubuntu)
+
+[ROS Kinetic Install Instructions](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+
 # Required packages
 The sim requires the install of a variety of pre-build ros packages. This can be done by running:
 
@@ -11,6 +18,17 @@ The sim requires the install of a variety of pre-build ros packages. This can be
 **ROS Kinetic**
 
 `sudo apt install ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-gmapping ros-kinetic-navigation`
+
+# Installing Google Test
+Google Test is a unit testing framework required for the packages within the .rosinstall files. Google Test is included with the full desktop installation of ROS. If you have already installed ROS follow the steps below to setup Google Test.
+
+```console
+sudo apt-get install cmake libgtest-dev
+cd /usr/src/gtest
+sudo cmake CMakeLists.txt
+sudo make
+sudo cp *.a /usr/lib
+```
 
 # Launching the sim
 Prior to launching the sim, you must export the turtlebot3 model:
@@ -28,6 +46,13 @@ There are two launch we have been using:
 Project 2 has two launch files you should look at:
 *  proj2.launch: Launches the turtlebot running with a simple unicycle model
 *  proj2_quad.launch: Launches a quadrotor running with a simple unicycle model
+
+Project 3 has four launch files to consider
+*  "proj3.launch": This is the default launch file
+    *  Upon launch, you can control the robot using the RVIZ "2D Nav Goal" at the top of the RVIZ window
+*  "proj3_randGoal.launch": This code executes a random goal. Once the goal is achieved, then another random goal is generated.
+*  "multi_g2g.launch": This is very similar to the "proj3_randGoal.launch", but now multiple robots are going to random goals
+*  "multi_topology.launch": This has the robots move randomly over a graph topology.
 
 # Installing Gazebo
 To run the launch files, you must first install Gazebo
