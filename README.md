@@ -4,9 +4,9 @@ This repo will contain launch and configuration files for launching the class si
 # Installing ROS
 To begin, install the version of ROS supported by your version of Ubuntu. Currently Ubuntu 16.04 uses ROS Kinetic and 18.04 uses ROS Melodic.
 
-[ROS Melodic Install Instructions](http://wiki.ros.org/melodic/Installation/Ubuntu)
-
 [ROS Kinetic Install Instructions](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+
+[ROS Melodic Install Instructions](http://wiki.ros.org/melodic/Installation/Ubuntu)
 
 # Required packages
 The sim requires the install of a variety of pre-build ros packages. This can be done by running:
