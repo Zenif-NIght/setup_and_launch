@@ -59,20 +59,11 @@ To run the launch files, you must first install Gazebo
 
 **ROS Melodic**
 
-`sudo apt install ros-melodic-gazebo-ros`
-
-`sudo apt install ros-melodic-gazebo-ros-control`
-
-`sudo apt install ros-melodic-gazebo-ros-pkgs`
-
+`sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs`
 
 **ROS Kinetic**
 
-`sudo apt install ros-kinetic-gazebo-ros`
-
-`sudo apt install ros-kinetic-gazebo-ros-control`
-
-`sudo apt install ros-kinetic-gazebo-ros-pkgs`
+`sudo apt install ros-kinetic-gazebo-ros ros-kinetic-gazebo-ros-control ros-kinetic-gazebo-ros-pkgs`
 
 # Using the joystick
 The proj2.launch and proje2_quad.launch have options for using a joystick to control the robot. To use the joystick, set the following in the launch file: 
