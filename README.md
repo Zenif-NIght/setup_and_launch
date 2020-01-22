@@ -72,17 +72,17 @@ The proj2.launch and proje2_quad.launch have options for using a joystick to con
 
 The left joystick on a logitech game pad will then run. This joystick control depends on the ros joy package. You must install the joy package (for joystick drivers)
 
-kinetic:
-
-`sudo apt install ros-kinetic-ros-tutorials`
-
-`sudo apt install ros-kinetic-joy`
-
-melodic:
+**ROS Melodic**
 
 `sudo apt install ros-melodic-ros-tutorials`
 
 `sudo apt install ros-melodic-joy`
+
+**ROS Kinetic**
+
+`sudo apt install ros-kinetic-ros-tutorials`
+
+`sudo apt install ros-kinetic-joy`
 
 # Setting up your joystick controller
 See [http://wiki.ros.org/joy](http://wiki.ros.org/joy) to setup the joystick drivers correctly.
