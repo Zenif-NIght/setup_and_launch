@@ -86,3 +86,7 @@ The left joystick on a logitech game pad will then run. This joystick control de
 
 # Setting up your joystick controller
 See [http://wiki.ros.org/joy](http://wiki.ros.org/joy) to setup the joystick drivers correctly.
+
+# Installing NLopt
+
+[NLopt install instructions](https://nlopt.readthedocs.io/en/latest/NLopt_Installation/)
