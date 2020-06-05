@@ -39,6 +39,11 @@ To run the launch files, you must first install Gazebo
 **ROS Kinetic**
 
 `sudo apt install ros-kinetic-gazebo-ros ros-kinetic-gazebo-ros-control ros-kinetic-gazebo-ros-pkgs`
+
+# Installing NLopt
+
+[NLopt install instructions](https://nlopt.readthedocs.io/en/latest/NLopt_Installation/)
+
 # Launching the sim
 Prior to launching the sim, you must export the turtlebot3 model:
 
@@ -84,7 +89,3 @@ The left joystick on a logitech game pad will then run. This joystick control de
 
 # Setting up your joystick controller
 See [http://wiki.ros.org/joy](http://wiki.ros.org/joy) to setup the joystick drivers correctly.
-
-# Installing NLopt
-
-[NLopt install instructions](https://nlopt.readthedocs.io/en/latest/NLopt_Installation/)
