@@ -42,7 +42,7 @@ To run the launch files, you must first install Gazebo
 
 # Installing NLopt
 
-[NLopt install instructions](https://nlopt.readthedocs.io/en/latest/NLopt_Installation/)
+[NLopt install instructions](https://nlopt.readthedocs.io/en/latest/#download-and-installation)
 
 # Launching the sim
 Prior to launching the sim, you must export the turtlebot3 model:
