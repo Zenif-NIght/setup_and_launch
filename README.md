@@ -29,7 +29,16 @@ sudo cmake CMakeLists.txt
 sudo make
 sudo cp *.a /usr/lib
 ```
+# Installing Gazebo
+To run the launch files, you must first install Gazebo
 
+**ROS Melodic**
+
+`sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs`
+
+**ROS Kinetic**
+
+`sudo apt install ros-kinetic-gazebo-ros ros-kinetic-gazebo-ros-control ros-kinetic-gazebo-ros-pkgs`
 # Launching the sim
 Prior to launching the sim, you must export the turtlebot3 model:
 
@@ -53,17 +62,6 @@ Project 3 has four launch files to consider
 *  "proj3_randGoal.launch": This code executes a random goal. Once the goal is achieved, then another random goal is generated.
 *  "multi_g2g.launch": This is very similar to the "proj3_randGoal.launch", but now multiple robots are going to random goals
 *  "multi_topology.launch": This has the robots move randomly over a graph topology.
-
-# Installing Gazebo
-To run the launch files, you must first install Gazebo
-
-**ROS Melodic**
-
-`sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs`
-
-**ROS Kinetic**
-
-`sudo apt install ros-kinetic-gazebo-ros ros-kinetic-gazebo-ros-control ros-kinetic-gazebo-ros-pkgs`
 
 # Using the joystick
 The proj2.launch and proje2_quad.launch have options for using a joystick to control the robot. To use the joystick, set the following in the launch file: 
