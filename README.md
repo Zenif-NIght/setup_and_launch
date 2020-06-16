@@ -53,9 +53,14 @@ To run a launch file, execute the following command
 
 `roslaunch turtlebot_launch <desired launch file>.launch`
 
-There are two launch we have been using:
-*  turtlebot3_fakenode.launch: Runs a robot capable of being teleoperated without Gazebo
-*  turtlebot3_gazebo.launch: Runs a robot with sensor feedback from the Gazebo simulator
+There are several launch files illustrating fundamentals. The first two present simple simulations:
+* turtlebot3_gazebo.launch: Runs a robot with sensor feedback from the Gazebo simulator
+  * slam_methods: allows one to change which slam library is called
+* teleop.launch: Runs a robot that can be teleoperated from 
+  * run_joystick: switch between joystick and keyboard teleoperation
+  * spawn_gazebo: switches the physics engine from a basic sim to one run by Gazebo
+  * use_turtlebot_viz: switches between a turtlebot visualization and a quadrotor visualization
+* 
 
 Project 2 has two launch files you should look at:
 *  proj2.launch: Launches the turtlebot running with a simple unicycle model

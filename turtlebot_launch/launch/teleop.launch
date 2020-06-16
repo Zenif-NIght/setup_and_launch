@@ -1,11 +1,12 @@
 <launch>
   <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="namespace" default="/robot1"/>
-  <arg name="run_sim" default="true"/>
-  <arg name="run_rviz" default="true"/>
-  <arg name="run_joystick" default="false"/>
-  <arg name="spawn_gazebo" default="false" />
-  <arg name="x_pos" default="-7.0"/>
+  <arg name="run_sim" default="true"/> <!-- true => the simulation nodes will be run, only needs to be done for a single vehicle -->
+  <arg name="run_rviz" default="true"/> <!-- true => open rviz, only needs to be done for a single vehicle -->
+  <arg name="run_joystick" default="false"/> <!-- true => use the joystick node, false => teleop with keyboard -->
+  <arg name="spawn_gazebo" default="false" /> <!-- true => use gazebo for the physics engine, false => use simple physics -->
+  <arg name="use_turtlebot_viz" default="false" /> <!-- true => use a standard turtlebot visualization, false => use a quadrotor -->
+  <arg name="x_pos" default="-7.0"/> <!-- Pose of vehicle at start -->
   <arg name="y_pos" default="-1.0"/>
   <arg name="z_pos" default=" 0.0"/>
   <arg name="yaw"   default=" 1.57"/>
@@ -43,7 +44,17 @@
 
   <!-- Create Vehicle -->
   <group ns="$(arg namespace)" >
-    <include file="$(find turtlebot_launch)/launch/turtlebot3_rvizSim.launch">
+    <include file="$(find turtlebot_launch)/launch/turtlebot3_rvizSim.launch" if="$(arg use_turtlebot_viz)">
+      <arg name="model" value="$(arg model)" />
+      <arg name="namespace" value="$(arg namespace)" />
+      <arg name="spawn_gazebo" value="$(arg spawn_gazebo)" />
+      <arg name="x_pos" value="$(arg x_pos)"/>
+      <arg name="y_pos" value="$(arg y_pos)"/>
+      <arg name="z_pos" value="$(arg z_pos)"/>
+      <arg name="yaw"   value="$(arg yaw)"/>
+    </include>
+
+    <include file="$(find turtlebot_launch)/launch/quad_rvizSim.launch" unless="$(arg use_turtlebot_viz)">
       <arg name="model" value="$(arg model)" />
       <arg name="namespace" value="$(arg namespace)" />
       <arg name="spawn_gazebo" value="$(arg spawn_gazebo)" />
