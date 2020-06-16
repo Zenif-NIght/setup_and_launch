@@ -1,15 +1,15 @@
 <launch>
   <arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="namespace" default="/robot1"/>
-  <arg name="run_sim" default="true"/>
-  <arg name="run_rviz" default="true"/>
-  <arg name="run_joystick" default="false"/>
-  <arg name="spawn_gazebo" default="false" />
-  <arg name="x_pos" default="-7.0"/>
+  <arg name="run_sim" default="true"/> <!-- true => the simulation nodes will be run, only needs to be done for a single vehicle -->
+  <arg name="run_rviz" default="true"/> <!-- true => open rviz, only needs to be done for a single vehicle -->
+  <arg name="run_joystick" default="false"/> <!-- true => use the joystick node, false => use go-to-goal controller -->
+  <arg name="spawn_gazebo" default="false" /> <!-- true => use gazebo for the physics engine, false => use simple physics -->
+  <arg name="x_pos" default="-7.0"/> <!-- Pose of vehicle at start -->
   <arg name="y_pos" default="-1.0"/>
   <arg name="z_pos" default=" 0.0"/>
   <arg name="yaw"   default=" 1.57"/>
-  <arg name="dynamics_model" default="unicycle_dynamics"/>
+  <arg name="dynamics_model" default="unicycle_dynamics"/> <!-- options: "unicycle_dynamics" - use a unicycle model, "jerk_unicycle_dynamics" - use a jerk model -->
   <arg name="goal_topic" default="/move_base_simple/goal" />
 
   <!-- Start Simulation -->

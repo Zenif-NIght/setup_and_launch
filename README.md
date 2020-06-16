@@ -60,18 +60,14 @@ There are several launch files illustrating fundamentals. The first two present 
   * run_joystick: switch between joystick and keyboard teleoperation
   * spawn_gazebo: switches the physics engine from a basic sim to one run by Gazebo
   * use_turtlebot_viz: switches between a turtlebot visualization and a quadrotor visualization
-* 
-
-Project 2 has two launch files you should look at:
-*  proj2.launch: Launches the turtlebot running with a simple unicycle model
-*  proj2_quad.launch: Launches a quadrotor running with a simple unicycle model
-
-Project 3 has four launch files to consider
-*  "proj3.launch": This is the default launch file
-    *  Upon launch, you can control the robot using the RVIZ "2D Nav Goal" at the top of the RVIZ window
-*  "proj3_randGoal.launch": This code executes a random goal. Once the goal is achieved, then another random goal is generated.
-*  "multi_g2g.launch": This is very similar to the "proj3_randGoal.launch", but now multiple robots are going to random goals
-*  "multi_topology.launch": This has the robots move randomly over a graph topology.
+* go_to_goal.launch: Runs a go-to-goal node which allows 2D goal to be specified by RVIZ
+  * run_joystick: switches between joystick mode and go-to-goal mode
+  * spawn_gazebo: switches the physics engine from a basic sim to one run by Gazebo
+  * dynamics_model: allows switch between different dynamic models (unicycle and jerk)
+  * Variations on go-to-goal 
+     * go_to_random_goal.launch: Runs go_to_goal.launch with an additional node for creating a random goal
+     * multi_g2g.launch: Runs multiple versions of go_to_random_goal.launch, having multiple vehicles
+     *  multi_topology.launch: An additional node added to have each robot move over a random topology graph
 
 # Using the joystick
 The proj2.launch and proje2_quad.launch have options for using a joystick to control the robot. To use the joystick, set the following in the launch file: 

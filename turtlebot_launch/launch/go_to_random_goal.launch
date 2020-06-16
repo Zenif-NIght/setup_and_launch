@@ -15,7 +15,7 @@
   <arg name="dynamics_model" default="unicycle_dynamics"/>
   <arg name="goal_topic" default="$(arg namespace)/goal" />
 
-  <include file="$(find turtlebot_launch)/launch/proj3.launch">
+  <include file="$(find turtlebot_launch)/launch/go_to_goal.launch">
     <arg name="model" value="$(arg model)"/>
     <arg name="namespace" value="$(arg namespace)"/>
     <arg name="run_sim" value="$(arg run_sim)"/>
