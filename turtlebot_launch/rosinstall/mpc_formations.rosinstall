@@ -1,0 +1,19 @@
+# Robot development repos
+- git: {local-name: virtual_structure, 
+        uri: 'git@gitlab.com:droge-robotics/virtual_structure.git', 
+        version: master}
+- git: {local-name: voronoi_multi_agent, 
+        uri: 'git@gitlab.com:droge-robotics/voronoi_multi_agent.git', 
+        version: james-dev}
+- git: {local-name: epsilon_tracking_cpp, 
+        uri: 'git@gitlab.com:droge-robotics/general_research_code/epsilon_tracking_cpp.git', 
+        version: james-dev}
+- git: {local-name: low_level_control, 
+        uri: 'git@gitlab.com:droge-robotics/low-level-control.git', 
+        version: voronoi_traj_tracking}
+- git: {local-name: setup_and_launch, 
+        uri: 'git@gitlab.com:droge-robotics/setup_and_launch.git', 
+        version: dev-brian}
+- git: {local-name: topology_emulator, 
+        uri: 'git@gitlab.com:droge-robotics/network-topolology-emulator.git', 
+        version: rebroadcasters}
