@@ -8,7 +8,7 @@
 # Robot development repos
 - git: {local-name: low_level_control, 
         uri: 'git@gitlab.com:utahstate/20-fall-mobile-robotics/simple-sim/low_level_control.git', 
-        version: lab04}
+        version: master}
 - git: {local-name: setup_and_launch, 
         uri: 'git@gitlab.com:utahstate/20-fall-mobile-robotics/simple-sim/setup_and_launch.git', 
         version: master}
